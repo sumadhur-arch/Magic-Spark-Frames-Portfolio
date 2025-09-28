@@ -29,21 +29,37 @@
 
 /* 📱 On small screens, scale the whole site */
 @media(max-width:920px){
-  body {
-    transform: scale(0.8);   /* shrink site to 80% */
-    transform-origin: top left; 
-    width: 125%;             /* expand width so scaling fits */
+  main {
+    grid-template-columns:1fr;  /* stack content + sidebar */
+  }
+  header {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  nav {
+    margin-top:10px;
+    flex-wrap:wrap;
   }
 }
 
 @media(max-width:600px){
-  body {
-    transform: scale(0.65);  /* shrink even more for very small phones */
-    transform-origin: top left;
-    width: 155%;
+  .intro h2 {
+    font-size:18px;
+  }
+  .hero {
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .avatar img {
+    width:90px;
+    height:90px;
+  }
+  .proj-card {
+    min-width:240px;
+    max-width:90%;
   }
 }
-
 
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
 
